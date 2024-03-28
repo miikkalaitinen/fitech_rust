@@ -27,8 +27,6 @@ pub fn practice_problems_random_order(problems: &[(&str, &str)]) {
 
     let mut rng = thread_rng();
     let mut shuffle_problems = problems.to_vec();
-    println!("Unshuffled: {:?}", shuffle_problems);
     shuffle_problems.shuffle(&mut rng);
-    println!("Shuffled:   {:?}", shuffle_problems);
     practice_problems(&shuffle_problems);
 }
